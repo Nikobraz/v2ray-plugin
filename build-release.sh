@@ -39,7 +39,7 @@ for os in ${OSES[@]}; do
 done
 
 # ARM
-ARMS=(9)
+ARMS=(7)
 for v in ${ARMS[@]}; do
 	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=$v go build -v -ldflags "$LDFLAGS" -gcflags "$GCFLAGS" -o v2ray-plugin_linux_arm$v
 done
